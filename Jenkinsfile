@@ -13,11 +13,18 @@ pipeline {
             }
         }
 
+        stage('Listar Archivos') {
+            steps {
+                script {
+                    sh 'ls -la'
+                }
+            }
+        }
+
         stage('Construir') {
             steps {
                 script {
                     echo "Building..."
-                    sh 'll'
                     sh 'mvn --version'
                     sh 'mvn -B -DskipTests clean package'
                 }
