@@ -24,11 +24,9 @@ pipeline {
 
         stage('Construir') {
             steps {
-                script {
-                    echo "Maven variables"
-                    echo "${MAVEN_HOME}"
+                withMaven {
                     sh 'mvn --version'
-                    sh 'mvn -B -DskipTests clean package'
+                    sh "mvn clean verify"
                 }
             }
         }
