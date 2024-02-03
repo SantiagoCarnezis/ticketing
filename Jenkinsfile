@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clonar Repositorio') {
             steps {
-                git 'tu_repositorio_git'
+                git 'https://github.com/SantiagoCarnezis/ticketing.git'
             }
         }
 
