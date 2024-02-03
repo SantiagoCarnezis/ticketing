@@ -16,7 +16,8 @@ pipeline {
         stage('Listar Archivos') {
             steps {
                 script {
-                    sh 'ls -la'
+                    sh 'ls -la /opt'
+                    sh 'pwd'
                 }
             }
         }
@@ -24,7 +25,8 @@ pipeline {
         stage('Construir') {
             steps {
                 script {
-                    echo "Building..."
+                    echo "Maven variables"
+                    echo "${JENKINS_HOME}"
                     sh 'mvn --version'
                     sh 'mvn -B -DskipTests clean package'
                 }
