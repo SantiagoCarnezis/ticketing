@@ -1,32 +1,9 @@
 pipeline {
-    agent {
-        node {
-            label 'jenkins-agent-goes-here'
-            }
-      }
+    agent { docker { image 'maven:3.9.6-eclipse-temurin-17-alpine' } }
     stages {
-        stage('Build') {
+        stage('build') {
             steps {
-                echo "Building.."
-                sh '''
-                echo "doing build stuff.."
-                '''
-            }
-        }
-        stage('Test') {
-            steps {
-                echo "Testing.."
-                sh '''
-                echo "doing test stuff..
-                '''
-            }
-        }
-        stage('Deliver') {
-            steps {
-                echo 'Deliver....'
-                sh '''
-                echo "doing delivery stuff.."
-                '''
+                sh 'mvn --version'
             }
         }
     }
