@@ -4,13 +4,19 @@ pipeline {
     stages {
         stage('Clonar Repositorio') {
             steps {
-                git 'https://github.com/SantiagoCarnezis/ticketing.git'
+                git(
+                    url: "https://github.com/SantiagoCarnezis/ticketing.git",
+                    branch: "master",
+                    changelog: true,
+                    poll: true
+                )
             }
         }
 
         stage('Construir') {
             steps {
                 script {
+                    echo "Building..."
                     sh 'mvn clean install'
                 }
             }
@@ -19,6 +25,7 @@ pipeline {
         stage('Pruebas') {
             steps {
                 script {
+                    echo "Testing..."
                     sh 'mvn test'
                 }
             }
@@ -27,7 +34,7 @@ pipeline {
         stage('Desplegar') {
             steps {
                 script {
-                    // Agrega comandos para el despliegue según tu entorno
+                    echo "Deploying..."
                 }
             }
         }
