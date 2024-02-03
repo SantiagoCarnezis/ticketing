@@ -17,7 +17,6 @@ pipeline {
             steps {
                 script {
                     sh 'ls -la /opt'
-                    sh 'pwd'
                 }
             }
         }
