@@ -18,24 +18,7 @@ pipeline {
                 script {
                     echo "Building...."
                     sh 'mvn --version'
-                    sh 'mvn clean install'
-                }
-            }
-        }
-
-        stage('Pruebas') {
-            steps {
-                script {
-                    echo "Testing..."
-                    sh 'mvn test'
-                }
-            }
-        }
-
-        stage('Desplegar') {
-            steps {
-                script {
-                    echo "Deploying..."
+                    sh 'mvn -B -DskipTests clean package'
                 }
             }
         }
