@@ -26,8 +26,6 @@ pipeline {
             steps {
                 script {
                     echo "Maven variables"
-                    echo "${JENKINS_HOME}"
-                    echo "${JAVA_HOME}"
                     echo "${MAVEN_HOME}"
                     sh 'mvn --version'
                     sh 'mvn -B -DskipTests clean package'
