@@ -17,6 +17,7 @@ pipeline {
             steps {
                 script {
                     echo "Building..."
+                    sh 'll'
                     sh 'mvn --version'
                     sh 'mvn -B -DskipTests clean package'
                 }
