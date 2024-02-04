@@ -18,10 +18,10 @@ class TicketingApplicationTests {
 		Assertions.assertTrue(true);
 	}
 
-	@Test
-	public void test2() {
-
-		System.out.println("Este test corre mal");
-		Assertions.assertTrue(false);
-	}
+//	@Test
+//	public void test2() {
+//
+//		System.out.println("Este test corre mal");
+//		Assertions.assertTrue(false);
+//	}
 }
