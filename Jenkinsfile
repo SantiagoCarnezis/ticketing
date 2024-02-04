@@ -29,7 +29,7 @@ pipeline {
         stage('Construir') {
             steps {
                 sh "mvn clean verify"
-                sh 'ls -la'
+                sh 'ls -la target'
             }
         }
     }
