@@ -13,7 +13,7 @@ pipeline {
             }
         }
 
-        stage('Listar Archivos') {
+        stage('Listar Archivoss') {
             steps {
                 script {
                     sh 'ls -la'
