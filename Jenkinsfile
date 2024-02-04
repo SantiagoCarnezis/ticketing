@@ -17,6 +17,7 @@ pipeline {
             steps {
                 script {
                     sh 'ls -la'
+                    sh 'mvn --version'
                 }
             }
         }
