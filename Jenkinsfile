@@ -28,10 +28,7 @@ pipeline {
 
         stage('Construir') {
             steps {
-                withMaven {
-                    sh 'mvn --version'
-                    sh "mvn clean verify"
-                }
+                sh "mvn clean verify"
             }
         }
     }
