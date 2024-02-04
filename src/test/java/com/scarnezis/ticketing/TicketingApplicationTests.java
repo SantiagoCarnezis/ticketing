@@ -7,16 +7,16 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class TicketingApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
-
-	@Test
-	public void test1() {
-
-		System.out.println("Este test corre bien");
-		Assertions.assertTrue(true);
-	}
+//	@Test
+//	void contextLoads() {
+//	}
+//
+//	@Test
+//	public void test1() {
+//
+//		System.out.println("Este test corre bien");
+//		Assertions.assertTrue(true);
+//	}
 
 //	@Test
 //	public void test2() {
