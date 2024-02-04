@@ -16,7 +16,7 @@ pipeline {
         stage('Listar Archivos') {
             steps {
                 script {
-                    sh 'ls -la /opt'
+                    sh 'ls -la'
                 }
             }
         }
