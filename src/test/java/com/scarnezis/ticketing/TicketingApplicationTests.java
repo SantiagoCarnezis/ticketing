@@ -11,12 +11,12 @@ class TicketingApplicationTests {
 //	void contextLoads() {
 //	}
 //
-//	@Test
-//	public void test1() {
-//
-//		System.out.println("Este test corre bien");
-//		Assertions.assertTrue(true);
-//	}
+	@Test
+	public void test1() {
+
+		System.out.println("Este test corre bien");
+		Assertions.assertTrue(true);
+	}
 
 //	@Test
 //	public void test2() {
