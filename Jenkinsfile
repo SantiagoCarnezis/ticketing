@@ -26,7 +26,7 @@ pipeline {
             }
         }
 
-        stage('Construir') {
+        stage('Construirr') {
             steps {
                 sh "mvn clean verify"
                 sh 'ls -la target'
