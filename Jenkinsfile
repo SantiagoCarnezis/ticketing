@@ -2,7 +2,7 @@ pipeline {
 
     agent {
         docker {
-            image "maven:3.9.6-amazoncorretto-17-debian"
+            image 'maven:3.9.6-amazoncorretto-17-debian'
         }
     }
 
@@ -38,18 +38,18 @@ pipeline {
             }
         }
 
-        stage('Docker') {
-            steps {
-                sh "docker --version"
-            }
-        }
-
-        stage('Dockerr 2') {
-            steps {
-                sh "docker build -t zazoo-image ."
-                sh "docker run -d zazoo-image"
-            }
-        }
+//         stage('Docker') {
+//             steps {
+//                 sh "docker --version"
+//             }
+//         }
+//
+//         stage('Dockerr 2') {
+//             steps {
+//                 sh "docker build -t zazoo-image ."
+//                 sh "docker run -d zazoo-image"
+//             }
+//         }
     }
 
     post {
