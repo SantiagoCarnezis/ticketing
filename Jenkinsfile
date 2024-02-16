@@ -43,6 +43,13 @@ pipeline {
                 sh "docker --version"
             }
         }
+
+        stage('Docker 2') {
+            steps {
+                sh "docker build -t zazoo-image ."
+                sh "docker run -d zazoo-image"
+            }
+        }
     }
 
     post {
