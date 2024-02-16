@@ -31,6 +31,18 @@ pipeline {
                 sh "mvn clean verify"
                 sh 'ls -la target'
             }
+
+        stage('Docker') {
+            steps {
+                sh "docker --version"
+            }
+        }
+
+        stage('Dockerr 2') {
+            steps {
+                sh "docker build -t zazoo-image ."
+                sh "docker run -d zazoo-image"
+            }
         }
     }
 
