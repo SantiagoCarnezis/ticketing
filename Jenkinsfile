@@ -31,6 +31,7 @@ pipeline {
                 sh "mvn clean verify"
                 sh 'ls -la target'
             }
+        }
 
         stage('Docker') {
             steps {
