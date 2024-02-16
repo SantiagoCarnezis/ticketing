@@ -4,18 +4,24 @@ pipeline {
     tools {
         maven "maven"
     }
+//     agent {
+//         dockerfile {
+//             label "docker"
+//             //args "-v /tmp/maven:/home/jenkins/.m2 -e MAVEN_CONFIG=/home/jenkins/.m2"
+//         }
+//     }
 
     stages {
-        stage('Clonar Repositorio') {
-            steps {
-                git(
-                    url: "https://github.com/SantiagoCarnezis/ticketing.git",
-                    branch: "master",
-                    changelog: true,
-                    poll: true
-                )
-            }
-        }
+//         stage('Clonar Repositorio') {
+//             steps {
+//                 git(
+//                     url: "https://github.com/SantiagoCarnezis/ticketing.git",
+//                     branch: "master",
+//                     changelog: true,
+//                     poll: true
+//                 )
+//             }
+//         }
 
         stage('Listar Archivoss') {
             steps {
@@ -30,6 +36,11 @@ pipeline {
             steps {
                 sh "mvn clean verify"
                 sh 'ls -la target'
+            }
+
+        stage('Docker') {
+            steps {
+                sh "docker --version"
             }
         }
     }
