@@ -44,7 +44,7 @@ pipeline {
             }
         }
 
-        stage('Docker 2') {
+        stage('Dockerr 2') {
             steps {
                 sh "docker build -t zazoo-image ."
                 sh "docker run -d zazoo-image"
