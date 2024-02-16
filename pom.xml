@@ -65,7 +65,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>zazoo</finalName>
+		<!--<finalName>zazoo</finalName>-->
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
