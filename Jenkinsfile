@@ -12,16 +12,16 @@ pipeline {
 //     }
 
     stages {
-//         stage('Clonar Repositorio') {
-//             steps {
-//                 git(
-//                     url: "https://github.com/SantiagoCarnezis/ticketing.git",
-//                     branch: "master",
-//                     changelog: true,
-//                     poll: true
-//                 )
-//             }
-//         }
+        stage('Clonar Repositorio') {
+            steps {
+                git(
+                    url: "https://github.com/SantiagoCarnezis/ticketing.git",
+                    branch: "master",
+                    changelog: true,
+                    poll: true
+                )
+            }
+        }
 
         stage('Listar Archivoss') {
             steps {
